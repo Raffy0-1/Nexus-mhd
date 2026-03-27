@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { 
-  Home, Building2, CircleDollarSign, Users, MessageCircle, 
-  Bell, FileText, Settings, HelpCircle
+import {
+  Home, Building2, CircleDollarSign, Users, MessageCircle,
+  Bell, FileText, Settings, HelpCircle,
+  // New Features
+  Calendar, Video, FileCheck, Wallet, ShieldCheck
 } from 'lucide-react';
 
 interface SidebarItemProps {
