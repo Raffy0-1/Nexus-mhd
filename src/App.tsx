@@ -17,6 +17,13 @@ import { InvestorDashboard } from './pages/dashboard/InvestorDashboard';
 import { EntrepreneurProfile } from './pages/profile/EntrepreneurProfile';
 import { InvestorProfile } from './pages/profile/InvestorProfile';
 
+// Nexus Phase 2 Pages
+import { MeetingCalendar } from "./pages/meetings/MeetingCalendar";
+import { VideoCall } from "./pages/video-call/VideoCall";
+import { DocumentChamber } from "./pages/documents/DocumentChamber";
+import { PaymentSection } from "./pages/payments/PaymentSection";
+import { SecurityAccess } from "./pages/security/SecurityAccess";
+
 // Feature Pages
 import { InvestorsPage } from './pages/investors/InvestorsPage';
 import { EntrepreneursPage } from './pages/entrepreneurs/EntrepreneursPage';
@@ -26,13 +33,6 @@ import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
-
-// Nexus Phase 2 Pages
-import MeetingCalendar from "./pages/meetings/MeetingCalendar";
-import VideoCall from "./pages/video-call/VideoCall";
-import DocumentChamber from "./pages/documents/DocumentChamber";
-import PaymentSection from "./pages/payments/PaymentSection";
-import SecurityAccess from "./pages/security/SecurityAccess";
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -56,6 +56,27 @@ function App() {
           <Route path="/profile" element={<DashboardLayout />}>
             <Route path="entrepreneur/:id" element={<EntrepreneurProfile />} />
             <Route path="investor/:id" element={<InvestorProfile />} />
+          </Route>
+
+          {/* Nexus Phase 2 - New Collaborative Features */}
+          <Route path="/meetings" element={<DashboardLayout />}>
+            <Route index element={<MeetingCalendar />} />
+          </Route>
+          
+          <Route path="/video-call" element={<DashboardLayout />}>
+            <Route index element={<VideoCall />} />
+          </Route>
+          
+          <Route path="/documents" element={<DashboardLayout />}>
+            <Route index element={<DocumentChamber />} />
+          </Route>
+          
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentSection />} />
+          </Route>
+          
+          <Route path="/security" element={<DashboardLayout />}>
+            <Route index element={<SecurityAccess />} />
           </Route>
           
           {/* Feature Routes */}
